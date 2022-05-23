@@ -10,7 +10,7 @@ This app is built for help people to know what are the current temperatature for
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Display a detailed information about the weather from the temperature (in Celcius), forcast for the next few days, and display images according to the current searched city
 
 ## Getting Started
 
