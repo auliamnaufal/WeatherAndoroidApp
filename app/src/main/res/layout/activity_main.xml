@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_weathher">
+
+        <ImageView
+            android:id="@+id/img_bg_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@color/purple_200"
+            android:contentDescription="@string/content_bg_based_on_weather" />
+
+        <ImageView
+            android:id="@+id/img_ic_weather"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/bg_icon_weather"
+            android:contentDescription="@string/content_icon_base_on_weather"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_degree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:text="32˚C"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/img_ic_weather" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="64dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:text="Jakarta"
+            app:layout_constraintTop_toBottomOf="@+id/tv_degree"
+            android:id="@+id/tv_city" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="64dp"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/edt_search"
+            app:layout_constraintTop_toBottomOf="@id/tv_city"
+            tools:layout_editor_absoluteX="0dp"
+            tools:listitem="@layout/row_item_weather" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="48dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="text"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:defaultQueryHint="Search Another Location"
+            android:theme="@style/SearchViewStyle"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="@id/edt_search"
+            app:layout_constraintStart_toStartOf="@id/edt_search"
+            app:layout_constraintTop_toBottomOf="@id/edt_search" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
