@@ -20,21 +20,20 @@ Display a detailed information about the weather from the temperature (in Celciu
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Copy the project's git link
+* Open terminal 
+* Navigate to the directory you want to download the project
+* Type the following to the command line
+	```
+	git clone <github-repo-link>
+	```
+* Open project
 
 ### Executing program
 
 * Open Project oin android studio
 * Select where you want to run the project's on
 * Click Run
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
 
 ## Authors
 
