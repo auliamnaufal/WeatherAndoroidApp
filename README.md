@@ -3,9 +3,9 @@
 This app is built for help people to know what are the current temperatature for certain place in the world as well as the weather forcast
 
 <p float="left">
-  <img src="/images/mountainView.png" width="100" />
-  <img src="/images/indonesia.png" width="100" /> 
-  <img src="/images/london.png" width="100" />
+  <img src="/images/mountainView.png" width="250" />
+  <img src="/images/indonesia.png" width="250" /> 
+  <img src="/images/london.png" width="250" />
 </p>
 
 ## Description
